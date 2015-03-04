@@ -131,8 +131,7 @@ public class TestProvider extends AndroidTestCase {
                     providerInfo.authority, WeatherContract.CONTENT_AUTHORITY);
         } catch (PackageManager.NameNotFoundException e) {
             // I guess the provider isn't registered correctly.
-            assertTrue("Error: WeatherProvider not registered at " + mContext.getPackageName(),
-                    false);
+            fail("Error: WeatherProvider not registered at " + mContext.getPackageName());
         }
     }
 
